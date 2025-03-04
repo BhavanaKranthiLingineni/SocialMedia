@@ -345,7 +345,7 @@ if st.session_state['sbutton1'] == True:
     with col7:
         reachp = st.selectbox("Select Reach:",data1['Reach'].unique(),key="reach_1")
     
-    if st.button("Estimate"):
+    if st.button("Estimate",key="estimate_button_1"):
 
         row = pd.DataFrame([[inst,cour,foll,typep,locatio,dayname,reachp]], columns=data1.columns)
 
@@ -393,12 +393,12 @@ if st.session_state['sbutton1'] == True:
             # Prediction
             predicted_values = xgbr.predict(row)[0]
 
-            likes = round(predicted_values[0], 2)
-            shares = round(predicted_values[1], 2)
-            comments = round(predicted_values[2], 2)
+            likes = round(predicted_values[0])
+            shares = round(predicted_values[1])
+            comments = round(predicted_values[2])
 
             # Display Results in Streamlit
-            st.success(f"**Likes:** {round(likes,2)}")
+            st.success(f"**Likes:** {likes}")
             st.success(f"**Shares:** {shares}")
             st.success(f"**Comments:** {comments}")
             
