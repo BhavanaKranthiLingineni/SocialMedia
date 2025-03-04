@@ -331,7 +331,7 @@ if st.session_state['sbutton1'] == True:
 
     col3, col4 = st.columns(2)
     with col3:
-        foll = st.number_input(f"Enter number of followers: {data1['Followers'].min()} to {data1['Followers'].max()}:")
+        foll = st.number_input(f"Enter number of followers: {data['Followers'].min()} to {data['Followers'].max()}:")
     
     with col4:
         typep = st.selectbox("Select TypeofPost:", data1['type'].unique(),key="post_1")
