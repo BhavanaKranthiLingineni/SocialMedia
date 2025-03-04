@@ -308,9 +308,9 @@ if st.session_state['fbutton1'] == True:
             predictions = xgbr.predict(data1)  # Get predictions as NumPy array
 
             # Extract and round values for likes, shares, and comments
-            df1['Predicted_Likes'] = [round(float(pred[0]), 2) for pred in predictions]
-            df1['Predicted_Shares'] = [round(float(pred[1]), 2) for pred in predictions]
-            df1['Predicted_Comments'] = [round(float(pred[2]), 2) for pred in predictions]
+            df1['Predicted_Likes'] = [round(float(pred[0])) for pred in predictions]
+            df1['Predicted_Shares'] = [round(float(pred[1])) for pred in predictions]
+            df1['Predicted_Comments'] = [round(float(pred[2])) for pred in predictions]
             st.success(":green[Done!]")
             st.write(":blue[Predicted Likes,Comments,Shares....]")
             st.dataframe(df1)
