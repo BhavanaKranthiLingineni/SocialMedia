@@ -45,7 +45,7 @@ st.write(":violet[The predictive model will analyze historical data from social 
 colx, coly, colz = st.columns([1,2,1])
 
 with coly:
-    st.image("k.jpg")
+    st.image("K.jpg")
 
 st.divider()
 st.write("Sample of Data, Predictive Model Trained...")
