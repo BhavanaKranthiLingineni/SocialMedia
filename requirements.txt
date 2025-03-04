@@ -9,3 +9,4 @@ scikit-learn
 seaborn
 simple-colors
 streamlit
+xgboost
